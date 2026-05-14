@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 	QList<QStringList> Elements;
 	std::string filepath;
 	QStringList inputs;
-	//std::cout << "Input file path...\n";
-	//std::cin >> filepath;
+	std::cout << "Input file path...\n";
+	std::cin >> filepath;
 	// Hardcode input
 	//	filepath = "sat_ex_2.pla";
 	//filepath = "Sat_ex11_3.pla";
-	filepath = "Sat_ex30_3.pla";
+    //filepath = "Sat_ex30_3.pla";
 	QFile file(QString::fromUtf8(filepath.c_str()));
 
 	//считываем весь файл
