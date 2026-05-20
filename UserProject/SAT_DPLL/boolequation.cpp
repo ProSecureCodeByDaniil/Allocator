@@ -4,6 +4,12 @@
 #include <ostream>
 #include <string>
 
+#ifdef USE_ALLOCATOR
+// <-- добавляем: реализация аллокатора для класса BoolEquation (только если включён)
+// 0 = неограниченное количество блоков из кучи (режим HEAP_BLOCKS)
+IMPLEMENT_ALLOCATOR(BoolEquation, 0, nullptr)
+#endif
+
 BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask)
 {
 	this->cnf = new BoolInterval*[cnfSize];

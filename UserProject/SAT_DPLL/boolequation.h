@@ -2,9 +2,13 @@
 #define BOOLEQUATION_H
 
 #include "boolinterval.h"
+#include "Allocator.h"   // <-- добавляем: подключаем аллокатор
 
 class BoolEquation
 {
+#ifdef USE_ALLOCATOR
+    DECLARE_ALLOCATOR   // <-- добавляем: аллокатор для класса BoolEquation (только если включён)
+#endif
 public:
 	BoolInterval **cnf;//множество интервалов
 	BoolInterval *root;//Корень уравнения
