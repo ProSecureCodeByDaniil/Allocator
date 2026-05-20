@@ -1,0 +1,610 @@
+{
+  "version": 2,
+  "warnings": [
+    {
+      "code": "V730",
+      "cwe": 457,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 1,
+      "message": "Not all members of a class are initialized inside the constructor. Consider inspecting: m_memory.",
+      "positions": [
+        {
+          "endLine": 93,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\Allocator.h",
+          "line": 93,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 1198105729,
+            "nextLine": 123,
+            "previousLine": 5816
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-EXP53-CPP"
+    },
+    {
+      "code": "V690",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "The 'X' class implements the copy assignment operator, but lacks a copy constructor. It is dangerous to use such a class.",
+      "positions": [
+        {
+          "endLine": 10,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.h",
+          "line": 10,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 2266,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V688",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 3,
+      "message": "The 'size' function argument possesses the same name as one of the class members, which can result in a confusion.",
+      "positions": [
+        {
+          "endLine": 29,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.h",
+          "line": 29,
+          "navigation": {
+            "columns": 0,
+            "currentLine": -998055022,
+            "nextLine": 100,
+            "previousLine": 1677380
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-DCL01-C"
+    },
+    {
+      "code": "V690",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 3,
+      "message": "The 'BoolInterval' class implements the copy assignment operator, but lacks a copy constructor. It is dangerous to use such a class.",
+      "positions": [
+        {
+          "endLine": 7,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\boolinterval.h",
+          "line": 7,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 4668214,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 31,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 31,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 11933293,
+            "nextLine": 123,
+            "previousLine": -332987762
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 52,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 52,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 372905,
+            "nextLine": 123,
+            "previousLine": 12503157
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 90,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 90,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 372905,
+            "nextLine": 123,
+            "previousLine": 50012581
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 109,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 109,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 372905,
+            "nextLine": 123,
+            "previousLine": 50012581
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 181,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 181,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 372905,
+            "nextLine": 123,
+            "previousLine": 50012581
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'vec' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 201,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 201,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 372905,
+            "nextLine": 123,
+            "previousLine": 200050406
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V1064",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 1,
+      "message": "The 'k' operand of the modulo operation is less than the '8' operand. The result is always equal to the left operand.",
+      "positions": [
+        {
+          "endLine": 321,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 321,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 6037,
+            "nextLine": 123,
+            "previousLine": 113
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'str' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 371,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 371,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 369449,
+            "nextLine": 123,
+            "previousLine": -2111072507
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V591",
+      "cwe": 393,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 1,
+      "message": "Non-void function should return a value.",
+      "positions": [
+        {
+          "endLine": 484,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 484,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 125,
+            "nextLine": 0,
+            "previousLine": 5597
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MSC52-CPP"
+    },
+    {
+      "code": "V755",
+      "cwe": 123,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "Copying potentially tainted data from 'std::cin' to buffer 'str'. Buffer overflow is possible.",
+      "positions": [
+        {
+          "endLine": 529,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 529,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 19127,
+            "nextLine": 187825,
+            "previousLine": 36292039
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-STR31-C"
+    },
+    {
+      "code": "V668",
+      "cwe": 571,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "There is no sense in testing the 'str' pointer against null, as the memory was allocated using the 'new' operator. The exception will be generated in the case of memory allocation error.",
+      "positions": [
+        {
+          "endLine": 526,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 526,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 2955654,
+            "nextLine": 123,
+            "previousLine": 365333981
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-MEM52-CPP"
+    },
+    {
+      "code": "V1077",
+      "cwe": 457,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "Conditional initialization inside the 'X' constructor may leave some members uninitialized. Inspect the following: ptr, index.",
+      "positions": [
+        {
+          "endLine": 430,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 430,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 67613773,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        },
+        {
+          "endLine": 434,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 434
+        },
+        {
+          "endLine": 435,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 435
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V1077",
+      "cwe": 457,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "Conditional initialization inside the 'BBV' constructor may leave some members uninitialized. Inspect the following: vec, len, size.",
+      "positions": [
+        {
+          "endLine": 26,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 26,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 29844177,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        },
+        {
+          "endLine": 30,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 30
+        },
+        {
+          "endLine": 33,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 33
+        },
+        {
+          "endLine": 34,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 34
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V1077",
+      "cwe": 457,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "Conditional initialization inside the 'BBV' constructor may leave some members uninitialized. Inspect the following: len, size, vec.",
+      "positions": [
+        {
+          "endLine": 45,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 45,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 477594917,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        },
+        {
+          "endLine": 49,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 49
+        },
+        {
+          "endLine": 50,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 50
+        },
+        {
+          "endLine": 51,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 51
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V1077",
+      "cwe": 457,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "Conditional initialization inside the 'BBV' constructor may leave some members uninitialized. Inspect the following: size, len, vec.",
+      "positions": [
+        {
+          "endLine": 83,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 83,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 1864141,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        },
+        {
+          "endLine": 87,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 87
+        },
+        {
+          "endLine": 88,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 88
+        },
+        {
+          "endLine": 89,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\BBV.cpp",
+          "line": 89
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V690",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "The 'BoolEquation' class implements a copy constructor, but lacks the copy assignment operator. It is dangerous to use such a class.",
+      "positions": [
+        {
+          "endLine": 8,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\boolequation.h",
+          "line": 8,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 4668100,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V690",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 2,
+      "message": "The 'NodeBoolTree' class implements a copy constructor, but lacks the copy assignment operator. It is dangerous to use such a class.",
+      "positions": [
+        {
+          "endLine": 9,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\NodeBoolTree.h",
+          "line": 9,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 4670247,
+            "nextLine": 123,
+            "previousLine": 0
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": ""
+    },
+    {
+      "code": "V688",
+      "cwe": 0,
+      "falseAlarm": false,
+      "favorite": false,
+      "level": 3,
+      "message": "The 'cnfSize' function argument possesses the same name as one of the class members, which can result in a confusion.",
+      "positions": [
+        {
+          "endLine": 14,
+          "file": "C:\\Users\\Snowman\\Documents\\Qt\\Allocator\\UserProject\\SAT_DPLL\\boolequation.cpp",
+          "line": 14,
+          "navigation": {
+            "columns": 0,
+            "currentLine": 2085503716,
+            "nextLine": 123,
+            "previousLine": 1572
+          }
+        }
+      ],
+      "projects": [
+        "laba_SAT1"
+      ],
+      "sastId": "CERT-DCL01-C"
+    }
+  ]
+}
