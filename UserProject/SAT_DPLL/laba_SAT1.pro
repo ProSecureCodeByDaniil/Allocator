@@ -20,6 +20,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         BBV.cpp \
+        NodeBoolTree.cpp \   # <-- добавляем: реализация аллокатора для NodeBoolTree
         boolequation.cpp \
         boolinterval.cpp \
         main.cpp \

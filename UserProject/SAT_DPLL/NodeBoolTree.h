@@ -4,9 +4,13 @@
 #include "BBV.h"
 #include "boolinterval.h"
 #include "boolequation.h"
+#include "Allocator.h"   // <-- добавляем: подключаем аллокатор
 
 class NodeBoolTree
 {
+#ifdef USE_ALLOCATOR
+    DECLARE_ALLOCATOR   // <-- добавляем: аллокатор для класса NodeBoolTree (только если включён)
+#endif
 public:
     NodeBoolTree(BoolEquation *equation){this->eq = equation;}
     NodeBoolTree(const NodeBoolTree &node){
