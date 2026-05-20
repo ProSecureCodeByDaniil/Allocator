@@ -24,7 +24,7 @@ SOURCES += \
         boolequation.cpp \
         boolinterval.cpp \
         main.cpp \
-        Allocator.cpp   # <-- добавляем: файл аллокатора
+        Allocator.cpp \   # <-- добавляем: файл аллокатора
         PatternStrategy.cpp   # <-- добавляем: реализации стратегий выбора переменной
 
 # Default rules for deployment.
@@ -38,5 +38,5 @@ HEADERS += \
     boolequation.h \
     boolinterval.h \
     Allocator.h \   # <-- добавляем: заголовочный файл аллокатора
-    DataTypes.h     # <-- добавляем: типы данных для аллокатора
+    DataTypes.h \   # <-- добавляем: типы данных для аллокатора
     PatternStrategy.h   # <-- добавляем: интерфейс и классы стратегий
