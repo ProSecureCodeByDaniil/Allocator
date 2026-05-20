@@ -4,8 +4,8 @@ CONFIG += c++11 console
 CONFIG -= app_bundle
 
 # <-- добавляем: опцию для включения Allocator (по умолчанию выключен = 0)
-DEFINES += USE_ALLOCATOR=0
-#DEFINES += USE_ALLOCATOR=1   # когда нужно включить
+#DEFINES += USE_ALLOCATOR=0
+DEFINES += USE_ALLOCATOR=1   # когда нужно включить
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings

@@ -11,9 +11,17 @@
 #include "boolequation.h"
 #include "BBV.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 int main(int argc, char *argv[])
 {
+// На Windows — UTF-8 в консоли, чтобы русские буквы не ломались
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+#endif
 	QStringList full_file_list;
 	QList<QStringList> Elements;
 	std::string filepath;
