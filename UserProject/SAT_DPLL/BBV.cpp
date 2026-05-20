@@ -3,6 +3,13 @@
 #include <iostream>
 #include <cstring>
 
+#ifdef USE_ALLOCATOR
+// <-- добавляем: реализация аллокатора для классов BBV и X (только если включён)
+// 0 = неограниченное количество блоков из кучи (режим HEAP_BLOCKS)
+IMPLEMENT_ALLOCATOR(BBV, 0, nullptr)
+IMPLEMENT_ALLOCATOR(X, 0, nullptr)
+#endif
+
 BBV::~BBV()
 {
     if(vec != NULL)

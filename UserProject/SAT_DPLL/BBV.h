@@ -2,12 +2,16 @@
 #define BBV_H
 
 #include <iostream>
+#include "Allocator.h"   // <-- добавляем: подключаем аллокатор
 using namespace std;
 
 typedef unsigned char byte;
 
 class X
 {
+#ifdef USE_ALLOCATOR
+    DECLARE_ALLOCATOR   // <-- добавляем: аллокатор для класса X (только если включён)
+#endif
     byte* ptr;//указатель на ячейку, где хранится нужный бит
     int index;//номер бита в ячейке
 public:
@@ -21,6 +25,9 @@ public:
 
 class BBV
 {
+#ifdef USE_ALLOCATOR
+    DECLARE_ALLOCATOR   // <-- добавляем: аллокатор для класса BBV (только если включён)
+#endif
     friend X;
     byte* vec;//указатель на массив ячеек
     int size;//количество ячеек
