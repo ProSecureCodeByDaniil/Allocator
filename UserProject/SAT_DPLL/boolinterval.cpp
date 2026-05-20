@@ -2,6 +2,13 @@
 #include "BBV.h"
 #include <cstring>
 #include<iostream>
+
+#ifdef USE_ALLOCATOR
+// <-- добавляем: реализация аллокатора для класса BoolInterval (только если включён)
+// 0 = неограниченное количество блоков из кучи (режим HEAP_BLOCKS)
+IMPLEMENT_ALLOCATOR(BoolInterval, 0, nullptr)
+#endif
+
 BoolInterval::BoolInterval(size_t len)
 {
 	vec = BBV(len);

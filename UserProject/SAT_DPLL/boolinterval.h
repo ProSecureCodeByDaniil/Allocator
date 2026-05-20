@@ -2,9 +2,13 @@
 #define BOOLINTERVAL_H
 
 #include "BBV.h"
+#include "Allocator.h"   // <-- добавляем: подключаем аллокатор
 
 class BoolInterval
 {
+#ifdef USE_ALLOCATOR
+    DECLARE_ALLOCATOR   // <-- добавляем: аллокатор для класса BoolInterval (только если включён)
+#endif
 public:
 	BBV vec;
 	BBV dnc;
