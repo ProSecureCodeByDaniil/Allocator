@@ -25,6 +25,7 @@ SOURCES += \
         boolinterval.cpp \
         main.cpp \
         Allocator.cpp   # <-- добавляем: файл аллокатора
+        PatternStrategy.cpp   # <-- добавляем: реализации стратегий выбора переменной
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -38,3 +39,4 @@ HEADERS += \
     boolinterval.h \
     Allocator.h \   # <-- добавляем: заголовочный файл аллокатора
     DataTypes.h     # <-- добавляем: типы данных для аллокатора
+    PatternStrategy.h   # <-- добавляем: интерфейс и классы стратегий
