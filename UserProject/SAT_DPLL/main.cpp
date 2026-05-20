@@ -10,6 +10,7 @@
 #include "boolinterval.h"
 #include "boolequation.h"
 #include "BBV.h"
+#include "PatternStrategy.h"   // <-- добавляем: для использования стратегии
 
 #ifdef _WIN32
 #include <windows.h>
@@ -22,6 +23,32 @@ int main(int argc, char *argv[])
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 #endif
+
+    // <-- добавляем: интерактивный выбор стратегии ветвления
+    std::cout << "\n========================================\n";
+    std::cout << "   Паттерн 'Стратегия' для SAT задачи\n";
+    std::cout << "========================================\n\n";
+
+    std::cout << "Выберите стратегию выбора переменной:\n";
+    std::cout << "  1. MinDefended (оригинальная)\n";
+    std::cout << "\nВаш выбор (1): ";
+
+    int choice = 0;
+    std::cin >> choice;
+
+    PatternStrategy* selectedStrategy = nullptr;
+    std::string strategyName = "MinDefended (оригинальная)";
+
+    if (choice == 1 || choice == 0) {
+        selectedStrategy = new MinDefendedStrategy();
+    } else {
+        std::cout << "Неверный выбор! Используется стратегия по умолчанию.\n";
+        selectedStrategy = new MinDefendedStrategy();
+    }
+
+    std::cout << "\nВыбрана стратегия: " << strategyName << "\n\n";
+
+    // <-- изменяем: оригинальный код main.cpp с минимальным добавлением setStrategy
 	QStringList full_file_list;
 	QList<QStringList> Elements;
 	std::string filepath;
@@ -75,6 +102,7 @@ int main(int argc, char *argv[])
 		BoolInterval *root = new BoolInterval(vec, dnc);
 
 		BoolEquation *boolequation = new BoolEquation(CNF, root, cnfSize, cnfSize, vec);
+        boolequation->setStrategy(selectedStrategy);   // <-- добавляем: установка выбранной стратегии
 
 		// Алгоритм поиска корня. Работаем всегда с верхушкой стека.
 		// Шаг 1. Правила выполняются? Нет - Ветвление Шаг 5. Да - Упрощаем Шаг 2.
@@ -167,6 +195,11 @@ int main(int argc, char *argv[])
 
 		} while (BoolTree.size() > 1 && !rootIsFinded);
 
+        // <-- добавляем: вывод использованной стратегии
+        std::cout << "\n========================================\n";
+        std::cout << "Стратегия ветвления: " << strategyName << "\n";
+        std::cout << "========================================\n";
+
 		if (rootIsFinded) {
 			cout << "Root is:\n ";
 			BoolInterval *finded_root = BoolTree.top()->eq->root;
@@ -174,6 +207,8 @@ int main(int argc, char *argv[])
 		} else {
 			cout << "Root is not exists!";
 		}
+
+        delete selectedStrategy;   // <-- добавляем: очистка памяти стратегии
 
 	} else {
 		std::cout << "File does not exists.\n";
