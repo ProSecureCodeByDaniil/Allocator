@@ -10,6 +10,7 @@
 IMPLEMENT_ALLOCATOR(BoolEquation, 0, nullptr)
 #endif
 
+// <-- изменяем: конструктор с инициализацией стратегии
 BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, int count, BBV mask)
 {
 	this->cnf = new BoolInterval*[cnfSize];
@@ -22,7 +23,7 @@ BoolEquation::BoolEquation(BoolInterval **cnf, BoolInterval *root, int cnfSize, 
 	this->cnfSize = cnfSize;
 	this->count = count;
 	this->mask = mask;
-
+    this->strategy = nullptr;   // <-- добавляем: инициализация стратегии (по умолчанию nullptr)
 }
 
 BoolEquation::BoolEquation(BoolEquation &equation)
@@ -37,6 +38,7 @@ BoolEquation::BoolEquation(BoolEquation &equation)
 	this->cnfSize = equation.cnfSize;
 	this->count = equation.count;
 	this->mask = equation.mask;
+    this->strategy = equation.strategy;   // <-- добавляем: копируем указатель на стратегию
 }
 
 // Проверка правил
@@ -225,8 +227,15 @@ void BoolEquation::Simplify(int ixCol, char value)
 	mask.Set1(ixCol);
 }
 
+// <-- изменяем: метод выбора переменной теперь использует паттерн "Стратегия"
 int BoolEquation::ChooseColForBranching()
 {
+    // Если стратегия установлена, используем её
+    if (strategy != nullptr) {
+        return strategy->chooseVariable(cnf, cnfSize, mask);
+    }
+
+    // Иначе используем оригинальную логику (MinDefended) для обратной совместимости
 	vector<int> indexes;
 	vector<int> values;
 	bool rezInit = false;
