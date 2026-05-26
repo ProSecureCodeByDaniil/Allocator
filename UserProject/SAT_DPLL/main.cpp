@@ -31,19 +31,25 @@ int main(int argc, char *argv[])
 
     std::cout << "Выберите стратегию выбора переменной:\n";
     std::cout << "  1. MinDefended (оригинальная)\n";
-    std::cout << "\nВаш выбор (1): ";
+    std::cout << "  2. MaxOccurrence (максимальная частота)\n";
+    std::cout << "\nВаш выбор (1-2): ";
 
     int choice = 0;
     std::cin >> choice;
 
     PatternStrategy* selectedStrategy = nullptr;
-    std::string strategyName = "MinDefended (оригинальная)";
+    std::string strategyName = "";
 
-    if (choice == 1 || choice == 0) {
+    if (choice == 1) {
         selectedStrategy = new MinDefendedStrategy();
+        strategyName = "MinDefended (оригинальная)";
+    } else if (choice == 2) {
+        selectedStrategy = new MaxOccurrenceStrategy();
+        strategyName = "MaxOccurrence (максимальная частота)";
     } else {
-        std::cout << "Неверный выбор! Используется стратегия по умолчанию.\n";
+        std::cout << "Неверный выбор! Используется стратегия по умолчанию (MinDefended).\n";
         selectedStrategy = new MinDefendedStrategy();
+        strategyName = "MinDefended (оригинальная) [по умолчанию]";
     }
 
     std::cout << "\nВыбрана стратегия: " << strategyName << "\n\n";

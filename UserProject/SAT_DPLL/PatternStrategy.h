@@ -28,4 +28,12 @@ public:
     int chooseVariable(BoolInterval **cnf, int cnfSize, const BBV &mask) override;
 };
 
+// <-- добавляем: стратегия 2 - максимальная частота вхождения
+// Выбирает переменную, которая встречается в наибольшем количестве активных дизъюнктов
+class MaxOccurrenceStrategy : public PatternStrategy
+{
+public:
+    int chooseVariable(BoolInterval **cnf, int cnfSize, const BBV &mask) override;
+};
+
 #endif // PATTERNSTRATEGY_H
